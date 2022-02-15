@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
+
+* {
+    font-family: 'Outfit', sans-serif;
+}
+
+$default-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+$header-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+$hover-shadow: rgba(0, 0, 0, 0.48) 0px 4px 12px;
+$default-dark: rgba(10, 10, 10, 1);
+$default-radius: 4px;
+$content-width: 1420px;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 3.375rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+figure {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+button,
+input {
+    padding: 0.5rem 1rem;
+    border-radius: $default-radius;
+    border: 1px solid $default-dark;
+}
+
+button {
+    color: #fff;
+    background-color: #58b792;
+    border: 1px solid #58b792;
+    transition: filter 0.5s;
+}
+
+button:hover,
+button:focus {
+    cursor: pointer;
+    filter: brightness(0.8);
+}
+
+header {
+    box-shadow: $header-shadow;
+    margin-bottom: 2rem;
+
+    ul {
+        max-width: $content-width;
+        padding: 0;
+        margin: 0 auto;
+        font-weight: 700;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        display: inline-block;
+        color: $default-dark;
+        padding: 1rem 2rem;
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:focus,
+    a.active {
+        color: #58b792;
+    }
+}
+
+main {
+    min-height: 85vh;
+}
+
+footer {
+    height: 8rem;
+    background-color: #222;
+    color: #fff;
+}
+
+#input-field,
+#content-field,
+#product-field {
+    max-width: $content-width;
+    margin: 2rem auto;
+}
+
+#input-field {
+    display: flex;
+    justify-content: space-between;
+
+    div:nth-child(1) {
+        margin-left: 2rem;
+    }
+
+    div:nth-child(2) {
+        margin-right: 2rem;
+    }
+
+    button {
+        margin: 0;
+    }
+}
+
+#content-field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    .item {
+        display: grid;
+        grid-template-columns: 20% 70%;
+        justify-content: space-between;
+        padding: 1rem;
+        max-width: 400px;
+        box-shadow: $default-shadow;
+        border-radius: $default-radius;
+        transition: box-shadow 0.5s;
+
+    }
+
+    .item:hover {
+        cursor: pointer;
+        box-shadow: $hover-shadow;
+    }
+
+    .img-field {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 192px;
+        max-width: 192px;
+    }
+
+    .text-field {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 200px;
+    }
+
+    button {
+        grid-column: 1 / 3;
+        margin-top: 1rem;
+        align-self: flex-end;
+    }
+}
+
+#product-field {
+
+    #beer-article {
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: 60% 30%;
+        justify-content: space-between;
+
+        p,
+        span {
+            font-size: 1.25rem;
+        }
+
+        figure {
+            margin: 0 auto;
+        }
+
+        #img-field {
+            padding: 1rem 0;
+        }
+
+        img {
+            max-height: 600px;
+            max-width: 100%;
+        }
+    }
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: none;
+
+    .overlay-content {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 30vh;
+    }
+
+    .overlay-content img {
+        max-width: 100%;
+        max-height: 40vh;
+        margin: auto;
+    }
+
+    .overlay-item {
+        display: grid;
+        grid-template-columns: 20% 70%;
+        justify-content: space-between;
+        padding: 2rem;
+        width: 60vh;
+        border-radius: $default-radius;
+        background-color: #fff;
+
+        button {
+            display: block;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.page-select {
+    display: flex;
+    justify-content: center;
+
+    button,
+    input {
+        margin: 2rem 0.5rem;
+    }
+
+    input {
+        height: 1rem;
+        width: 2rem;
+        text-align: center;
+    }
+}

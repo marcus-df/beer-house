@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>The Beer House - Home</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </header>
+    <main>
+        <article id="input-field">
+            <div>
+                <button id="random-btn">Random</button>
+            </div>
+            <div>
+                <input type="text" id="search-input" placeholder="Search beer...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+        </article>
+        <section class="bg-container">
+            <section id="content-field"></section>
+        </section>
+        <section class="overlay">
+            <article class="overlay-content">
+                <figure class="overlay-item"></figure>
+            </article>
+        </section>
+        <article class="page-select">
+            <button id="prev-page">prev page</button>
+            <input type="text" value="1" id="page-num-field" disabled>
+            <button id="next-page">next page</button>
+        </article>
+    </main>
+    <footer></footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
