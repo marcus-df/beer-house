@@ -88,14 +88,23 @@ main {
 }
 
 footer {
-  height: 8rem;
+  height: 6rem;
+  padding: 2rem;
   background-color: #222;
-  color: #fff;
+  text-align: center;
+}
+footer div {
+  padding: 2rem;
+}
+footer a,
+footer span {
+  color: #969696;
 }
 
 #input-field,
 #content-field,
-#product-field {
+#product-field,
+#info-field {
   max-width: 1420px;
   margin: 2rem auto;
 }
@@ -162,6 +171,9 @@ footer {
   grid-template-columns: 60% 30%;
   justify-content: space-between;
 }
+#product-field #beer-article #img-field {
+  padding: 1rem 0;
+}
 #product-field #beer-article p,
 #product-field #beer-article span {
   font-size: 1.25rem;
@@ -169,12 +181,18 @@ footer {
 #product-field #beer-article figure {
   margin: 0 auto;
 }
-#product-field #beer-article #img-field {
-  padding: 1rem 0;
-}
 #product-field #beer-article img {
   max-height: 600px;
   max-width: 100%;
+}
+
+#info-field article {
+  max-width: 740px;
+  margin: 2rem;
+}
+#info-field p,
+#info-field span {
+  font-size: 1.25rem;
 }
 
 .overlay {
@@ -223,4 +241,10 @@ footer {
   height: 1rem;
   width: 2rem;
   text-align: center;
+}
+
+@media screen and (max-width: 820px) {
+  #product-field #beer-article {
+    grid-template-columns: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
